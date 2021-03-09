@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TipCalculator-Conahan</string>
+    <string name="subtotal_text">Enter Subtotal:</string>
+    <string name="size_text">Enter Size of Party:</string>
+    <string name="no_tip">No Tip</string>
+    <string name="_15">15%</string>
+    <string name="_20">20%</string>
+    <string name="_25">25%</string>
+    <string name="custom_tip">Custom Tip:</string>
+    <string name="calculate">Calculate</string>
+    <string name="bill_calculator">Bill Calculator</string>
 </resources>
