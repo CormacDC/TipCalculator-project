@@ -44,14 +44,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 subtotal = Double.parseDouble(subtotal_field.getText().toString());
                 size = Integer.parseInt(size_field.getText().toString());
-                if(customTip)
+                if(customTip) {
                     tip = Double.parseDouble(custom_field.getText().toString());
+                    tipPercent = tip / subtotal;
+                }
                 else
                     tip = tipPercent * subtotal;
 
                 total = subtotal + tip;
                 totalPerPerson = total / size;
 
+                i.putExtra("subtotal", subtotal);
+                i.putExtra("size", size);
+                i.putExtra("tip", tip);
+                i.putExtra("tipPercent", tipPercent);
+                i.putExtra("total", total);
+                i.putExtra("totalPerPerson", totalPerPerson);
 
                 startActivity(i);
             }
