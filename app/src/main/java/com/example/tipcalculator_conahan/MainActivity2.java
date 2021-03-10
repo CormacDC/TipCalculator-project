@@ -19,7 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView totalPerPerson;
 
     private double subtotalVal;
-    private double sizeVal;
+    private int sizeVal;
     private double tipVal;
     private double tipPercentVal;
     private double totalVal;
@@ -35,10 +35,12 @@ public class MainActivity2 extends AppCompatActivity {
 
         Intent i = getIntent();
 
+        back = findViewById(R.id.back);
+
         subtotalVal = i.getExtras().getDouble("subtotal");
-        sizeVal = i.getExtras().getDouble("size");
-        tipVal = i.getExtras().getDouble("tip") * 100.0;
-        tipPercentVal = i.getExtras().getDouble("tipPercent");
+        sizeVal = i.getExtras().getInt("size");
+        tipVal = i.getExtras().getDouble("tip");
+        tipPercentVal = i.getExtras().getDouble("tipPercent") * 100.0;
         totalVal = i.getExtras().getDouble("total");
         totalPerPersonVal = i.getExtras().getDouble("totalPerPerson");
 
@@ -49,12 +51,12 @@ public class MainActivity2 extends AppCompatActivity {
         total = findViewById(R.id.total);
         totalPerPerson = findViewById(R.id.totalPerPerson);
 
-        subtotal.setText(subtotal.getText().toString() + subtotalVal);
-        size.setText(size.getText().toString() + sizeVal);
-        tip.setText(tip.getText().toString() + tipVal);
-        tipPercent.setText(tipPercent.getText().toString() + tipPercentVal);
-        total.setText(total.getText().toString() + totalVal);
-        totalPerPerson.setText(totalPerPerson.getText().toString() + totalPerPersonVal);
+        subtotal.setText(subtotal.getText().toString() + "  " +  subtotalVal);
+        size.setText(size.getText().toString() + "  " +  sizeVal);
+        tip.setText(tip.getText().toString() + "  " + tipVal);
+        tipPercent.setText(tipPercent.getText().toString() + "  " +  tipPercentVal);
+        total.setText(total.getText().toString() + "  " +  totalVal);
+        totalPerPerson.setText(totalPerPerson.getText().toString() + "  " +  totalPerPersonVal);
 
 
         back.setOnClickListener(new View.OnClickListener() {
