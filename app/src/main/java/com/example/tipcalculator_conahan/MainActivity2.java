@@ -37,7 +37,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         subtotalVal = i.getExtras().getDouble("subtotal");
         sizeVal = i.getExtras().getDouble("size");
-        tipVal = i.getExtras().getDouble("tip");
+        tipVal = i.getExtras().getDouble("tip") * 100.0;
         tipPercentVal = i.getExtras().getDouble("tipPercent");
         totalVal = i.getExtras().getDouble("total");
         totalPerPersonVal = i.getExtras().getDouble("totalPerPerson");
